@@ -32,7 +32,7 @@ class Wiper {
     
     // Draw the radius of the Wiper
     fill(lineColor, 10);
-    strokeWeight(1);
+    strokeWeight(4);
     ellipse(this.x, this.y, this.radius*2, this.radius*2);
     
     // Set this border X,Y for other Wipers to use

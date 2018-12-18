@@ -5,22 +5,22 @@
 // Author: Kiet Tran
 // Dec 17, 2018
 
-color bgColor = #000000;
-color mainWiperColor = #2EC4B6;
-color wiper1Color = #E71D36;
-color wiper2Color = #FF9F1C;
-color wiper3Color = #2EC4B6;
-color lineColor = #E71D36;
-color waveColor = #E71D36;
+color bgColor = #FFFFFF;
+color mainWiperColor = #FF9393;
+color wiper1Color = #FFFF93;
+color wiper2Color = #93FF93;
+color wiper3Color = #9393FF;
+color lineColor = #FF1100;
+color waveColor = #0000FF;
 
 Wiper mainWiper, wiper1, wiper2, wiper3;
 
 void setup() {
-  size(1000, 500);
+  size(800, 500);
   background(bgColor);
   
   float mainRadius = 120; // amplitude
-  mainWiper = new Wiper(150, height/2, mainRadius, mainWiperColor);
+  mainWiper = new Wiper(230, height/2, mainRadius, mainWiperColor);
   wiper1 = new Wiper(0, 0, mainRadius/2, wiper1Color);
   wiper2 = new Wiper(0, 0, mainRadius/4, wiper2Color);
   wiper3 = new Wiper(0, 0, mainRadius/8, wiper3Color);
@@ -36,7 +36,7 @@ void draw() {
   rect(0, 0, width, height);
   
   // Draw the wipers
-  mainWiper.show(t * mouseY * 0.002);
+  mainWiper.show(t * mouseY * 0.002); // amplitude?
   
   wiper1.setX(mainWiper.getBorderX());
   wiper1.setY(mainWiper.getBorderY());
@@ -64,8 +64,8 @@ void draw() {
   
   // Draw the wave
   stroke(waveColor);
-  strokeWeight(3);
-  fill(wiper1Color, 10);
+  strokeWeight(1);
+  noFill();
   beginShape();
   for(int i = 0; i < waveY.size(); i++) {
     vertex(width/2.5 + i, waveY.get(i));
