@@ -12,9 +12,7 @@ Inspired by [this YouTube video](https://www.youtube.com/watch?v=ds0cmAV-Yek).
 
 ## Try it out!
 
-Click the link below to try it yourself.
-
-https://www.openprocessing.org/sketch/646562/embed/
+[Click here](https://www.openprocessing.org/sketch/646562/embed/) to try the interactive version yourself.
 
 ### Controls
 
