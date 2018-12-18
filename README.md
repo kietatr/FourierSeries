@@ -4,7 +4,7 @@ Visualizing the [Fourier series](https://en.wikipedia.org/wiki/Fourier_series) u
 
 ## Demo
 
-<iframe src="https://www.openprocessing.org/sketch/646562/embed/" width="800" height="500"></iframe>
+https://www.openprocessing.org/sketch/646562/embed/
 
 ## Result
 
