@@ -8,6 +8,7 @@ Inspired by [this YouTube video](https://www.youtube.com/watch?v=ds0cmAV-Yek).
 
 <p align="center">
   <img src="./gifs/fourierSeries.gif" alt="Fourier Series GIF"/>
+  <img src="./gifs/fourierSeries_2.gif" alt="Another Fourier Series GIF"/>
 </p>
 
 ## Try it out!

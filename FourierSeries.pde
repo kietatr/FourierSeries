@@ -19,15 +19,16 @@ void setup() {
   size(800, 500);
   background(bgColor);
   
-  float mainRadius = 120; // amplitude
+  float mainRadius = 100 * (4 / PI); // amplitude
   mainWiper = new Wiper(230, height/2, mainRadius, mainWiperColor);
-  wiper1 = new Wiper(0, 0, mainRadius/2, wiper1Color);
-  wiper2 = new Wiper(0, 0, mainRadius/4, wiper2Color);
-  wiper3 = new Wiper(0, 0, mainRadius/8, wiper3Color);
+  wiper1 = new Wiper(0, 0, mainRadius/3, wiper1Color);
+  wiper2 = new Wiper(0, 0, mainRadius/5, wiper2Color);
+  wiper3 = new Wiper(0, 0, mainRadius/7, wiper3Color);
 }
 
 float t = 0;
 ArrayList<Float> waveY = new ArrayList<Float>();
+int angleScale = 1;
 
 void draw() {
   // TRAILING EFFECT
@@ -35,20 +36,22 @@ void draw() {
   fill(bgColor, 50);
   rect(0, 0, width, height);
   
+  angleScale = int(map(mouseY, 0, height, 1, 10));
+  
   // Draw the wipers
-  mainWiper.show(t * mouseY * 0.002); // amplitude?
+  mainWiper.show(t * (1 + angleScale * 0));
   
   wiper1.setX(mainWiper.getBorderX());
   wiper1.setY(mainWiper.getBorderY());
-  wiper1.show(t * 2); // amplitude?
+  wiper1.show(t * (1 + angleScale * 1));
   
   wiper2.setX(wiper1.getBorderX());
   wiper2.setY(wiper1.getBorderY());
-  wiper2.show(t * 3); // amplitude?
+  wiper2.show(t * (1 + angleScale * 2));
   
   wiper3.setX(wiper2.getBorderX());
   wiper3.setY(wiper2.getBorderY());
-  wiper3.show(t * 4); // amplitude?
+  wiper3.show(t * (1 + angleScale * 3));
   
   // Draw a line from last wiper to wave
   stroke(lineColor);
@@ -74,4 +77,16 @@ void draw() {
   endShape();
   
   t += 2e-4 * mouseX; // frequency
+  
+  drawText();
+}
+
+void drawText() {
+  fill(0);
+  textSize(20);
+  textAlign(LEFT);
+  text("4" + 
+  " sin(" + (1 + angleScale * 3) + " theta)" +
+  " / " + (1 + angleScale * 3) + " PI", 
+  20, 30);
 }

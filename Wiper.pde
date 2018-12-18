@@ -22,8 +22,8 @@ class Wiper {
   
   // Draw the Wiper
   void show(float t) {
-    float borderX = this.x + this.radius * sin(t);
-    float borderY = this.y + this.radius * cos(t);
+    float borderX = this.x + this.radius * cos(t);
+    float borderY = this.y + this.radius * sin(t);
     
     // Draw a line from center to border
     stroke(lineColor);
