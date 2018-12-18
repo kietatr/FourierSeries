@@ -1,6 +1,8 @@
 # Fourier Series
 
-Visualizing the [Fourier series](https://en.wikipedia.org/wiki/Fourier_series) using Processing.
+Use Processing to visualize the [Fourier series](https://en.wikipedia.org/wiki/Fourier_series).
+
+Inspired by this video by SmarterEveryDay: https://www.youtube.com/watch?v=ds0cmAV-Yek
 
 ## Result
 
